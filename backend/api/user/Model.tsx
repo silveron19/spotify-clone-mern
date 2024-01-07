@@ -1,0 +1,18 @@
+import mongoose from 'mongoose';
+
+const userSchema = new mongoose.Schema(
+  {
+    _id: { type: String, required: true },
+    username: { type: String, required: true },
+    email: { type: String, required: true },
+    password: { type: String, required: true },
+    gender: { type: String, required: true },
+    birth_date: { type: String, required: true },
+    country: { type: String, required: true },
+    shared_data: { type: Boolean, required: true },
+    is_premium: { type: Boolean, required: true },
+  },
+  { collection: 'users' }
+);
+
+module.exports = mongoose.model('users', userSchema);

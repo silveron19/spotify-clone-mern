@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Hai",
+    "email": "sda@gmail.com",
+    "password": "hellosir",
+    "gender": "pria",
+    "birth_date": "19 Mei 2001",
+    "country": "Indonesia",
+    "shared_data": true,
+    "is_premium": true
+  }
+]

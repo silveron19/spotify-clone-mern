@@ -11,6 +11,13 @@ const userSchema = new mongoose.Schema(
     country: { type: String, required: true },
     shared_data: { type: Boolean, required: true },
     is_premium: { type: Boolean, required: true },
+    playlist_id: [
+      {
+        type: String,
+        ref: 'playlists',
+        required: true,
+      },
+    ],
   },
   { collection: 'users' }
 );

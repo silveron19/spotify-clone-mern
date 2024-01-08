@@ -1,5 +1,6 @@
 [
   {
+    "_id": "1",
     "name": "Hai",
     "email": "sda@gmail.com",
     "password": "hellosir",
@@ -7,6 +8,19 @@
     "birth_date": "19 Mei 2001",
     "country": "Indonesia",
     "shared_data": true,
-    "is_premium": true
+    "is_premium": true,
+    "playlist_id": ["1"]
+  },
+  {
+    "_id": "2",
+    "name": "Hello",
+    "email": "y@gmail.com",
+    "password": "hellosirt",
+    "gender": "wanita",
+    "birth_date": "19 Mei 2000",
+    "country": "Indonesia",
+    "shared_data": true,
+    "is_premium": true,
+    "playlist_id": ["2"]
   }
 ]

@@ -4,8 +4,11 @@ const playlistSchema = new mongoose.Schema(
   {
     _id: { type: String, required: true },
     title: { type: String, required: true },
-    user: [
-      { type: mongoose.Schema.Types.ObjectId, ref: 'users', required: true },
+    song_id: [
+      { type: String, ref: 'songs', required: true },
+    ],
+    user_id: [
+      { type: String, ref: 'users', required: true },
     ],
   },
   { collection: 'playlists' }

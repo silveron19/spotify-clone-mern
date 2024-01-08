@@ -1,5 +1,14 @@
 [
   {
-    "name": "artist1"
+    "_id": "1",
+    "name": "Alan Walker",
+    "pict": "https://img.wynk.in/unsafe/80x80/filters:no_upscale():strip_exif():format(webp)/http://s3.ap-south-1.amazonaws.com/discovery-prod-zion/zion/1671119553458-alan_walker.jpg",
+    "song_id": ["1"]
+  },
+  {
+    "_id": "2",
+    "name": "James Njie",
+    "pict": "https://img.wynk.in/unsafe/80x80/filters:no_upscale():strip_exif():format(webp)/http://s3.ap-south-1.amazonaws.com/discovery-prod-zion/zion/1672743258892-James_Njie.jpg",
+    "song_id": ["1"]
   }
 ]

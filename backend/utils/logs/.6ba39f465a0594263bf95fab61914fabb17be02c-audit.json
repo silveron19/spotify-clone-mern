@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 3
+    },
+    "auditLog": "D:\\Project\\Self Project\\spotify-clone-mern\\backend\\utils\\logs\\.6ba39f465a0594263bf95fab61914fabb17be02c-audit.json",
+    "files": [
+        {
+            "date": 1704965253044,
+            "name": "D:\\Project\\Self Project\\spotify-clone-mern\\backend\\utils\\logs\\2024-01-11-app.log",
+            "hash": "b4539b2b8622bd1ec74763eb68e40e82a23f1ded5bf9eec474c2c3b1eaa4996e"
+        }
+    ],
+    "hashType": "sha256"
+}

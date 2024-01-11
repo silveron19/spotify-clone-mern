@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon backend/server",
-    "client": "npm start --prefix frontend",
+    "client": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm start\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,10 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^8.0.3"
+    "mongoose": "^8.0.3",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1",
+    "winston-mongodb": "^5.1.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",

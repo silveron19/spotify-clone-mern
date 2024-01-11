@@ -20,4 +20,6 @@ const songSchema = new mongoose.Schema(
   { collection: 'songs' }
 );
 
-module.exports = mongoose.model('songs', songSchema);
+const songs = mongoose.model('songs', songSchema);
+
+export default songs;

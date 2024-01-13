@@ -1,8 +1,18 @@
 [
   {
-    "_id": "1",
     "title": "Alan Walker",
-    "song_id": ["1", "2"],
-    "user_id": ["1"]
+    "song_id": [
+      { "$oid": "65a27675d1f99ce136b16527" },
+      { "$oid": "65a27675d1f99ce136b16528" }
+    ],
+    "user_id": { "$oid": "65a279e2d1f99ce136b16539" }
+  },
+  {
+    "title": "Buat Turu",
+    "song_id": [
+      { "$oid": "65a27675d1f99ce136b16527" },
+      { "$oid": "65a27675d1f99ce136b16528" }
+    ],
+    "user_id": { "$oid": "65a279e2d1f99ce136b1653a" }
   }
 ]

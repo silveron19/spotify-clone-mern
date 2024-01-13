@@ -1,6 +1,6 @@
 [
   {
-    "_id": "1",
+    "_id": { "$oid": "65a279e2d1f99ce136b16539" },
     "name": "Hai",
     "email": "sda@gmail.com",
     "password": "hellosir",
@@ -9,10 +9,10 @@
     "country": "Indonesia",
     "shared_data": true,
     "is_premium": true,
-    "playlist_id": ["1"]
+    "playlist_id": [{ "$oid": "65a27943d1f99ce136b16530" }]
   },
   {
-    "_id": "2",
+    "_id": { "$oid": "65a279e2d1f99ce136b1653a" },
     "name": "Hello",
     "email": "y@gmail.com",
     "password": "hellosirt",
@@ -21,6 +21,6 @@
     "country": "Indonesia",
     "shared_data": true,
     "is_premium": true,
-    "playlist_id": ["2"]
+    "playlist_id": [{ "$oid": "65a27a52d1f99ce136b1653e" }]
   }
 ]

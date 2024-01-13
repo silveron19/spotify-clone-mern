@@ -1,4 +1,4 @@
-export function tryCatch(controller) {
+export default function tryCatch(controller) {
   return async (req, res, next) => {
     try {
       await controller(req, res);

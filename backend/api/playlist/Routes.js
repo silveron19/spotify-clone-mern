@@ -1,8 +1,8 @@
 import express from 'express';
-import getPlaylists from './Handler.js';
+import getPlaylistsHandler from './Handler.js';
 
 const router = express.Router();
 
-const playlistRoutes = router.get('/playlists', getPlaylists);
+router.get('/playlists', getPlaylistsHandler);
 
-export default playlistRoutes;
+export default router;

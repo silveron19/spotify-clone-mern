@@ -3,6 +3,9 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import errorHandler from './middleware/errorHandler.js';
 import playlistRoutes from './api/playlist/Routes.js';
+import userRoutes from './api/user/Routes.js';
+import validateRefreshToken from './middleware/validateRefreshToken.js';
+import generateAccessToken from './utils/generateAccessToken.js';
 
 dotenv.config();
 
@@ -12,7 +15,8 @@ connectDB();
 const PORT = process.env.PORT;
 
 app.use(express.static('frontend/build'));
-app.use('/api', playlistRoutes);
+app.use(express.json());
+app.use('/api', [playlistRoutes, userRoutes]);
 app.use(errorHandler);
 
 app.get('/', (req, res) => {

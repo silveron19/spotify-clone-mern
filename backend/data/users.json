@@ -8,8 +8,7 @@
     "birth_date": "19 Mei 2001",
     "country": "Indonesia",
     "shared_data": true,
-    "is_premium": true,
-    "playlist_id": [{ "$oid": "65a27943d1f99ce136b16530" }]
+    "is_premium": false
   },
   {
     "_id": { "$oid": "65a279e2d1f99ce136b1653a" },
@@ -19,8 +18,7 @@
     "gender": "wanita",
     "birth_date": "19 Mei 2000",
     "country": "Indonesia",
-    "shared_data": true,
-    "is_premium": true,
-    "playlist_id": [{ "$oid": "65a27a52d1f99ce136b1653e" }]
+    "shared_data": false,
+    "is_premium": true
   }
 ]

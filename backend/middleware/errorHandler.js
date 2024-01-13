@@ -4,10 +4,10 @@ import logger from '../utils/logger.cjs';
 const errorHandler = (err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   switch (statusCode) {
-    case constant.VALIDATION_ERROR:
-      logger.error(`Validation Failed: ${err.message}\n${err.stack}`);
+    case constant.BAD_REQUEST:
+      logger.error(`Bad Request: ${err.message}\n${err.stack}`);
       res.status(statusCode).json({
-        title: 'Validation Failed',
+        title: 'Bad Request',
         message: err.message,
       });
       break;

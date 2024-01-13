@@ -1,15 +1,23 @@
 import users from '../api/user/Model.js';
-import bcrypt from 'bcrypt';
+import { comparePassword } from '../utils/password.js';
 
 async function getUserByCredential(email, password) {
-  const user = await users.findOne({ email });
-  const dpassword = await bcrypt.compare(password, user.password);
+  const user = await getUserByEmail(email);
+  if (user === null) {
+    return null;
+  }
+  const dpassword = await comparePassword(password, user);
   const result = await users.findOne({
     email: user.email,
     password: user.password,
   });
 
   return { dpassword, user: result };
+}
+
+async function getUserByEmail(email) {
+  const result = await users.findOne({ email });
+  return result;
 }
 
 async function patchRefreshToken(user, token) {
@@ -22,4 +30,4 @@ async function patchRefreshToken(user, token) {
   return result;
 }
 
-export { getUserByCredential, patchRefreshToken };
+export { getUserByCredential, patchRefreshToken, getUserByEmail };

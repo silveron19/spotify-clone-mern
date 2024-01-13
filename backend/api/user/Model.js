@@ -10,13 +10,6 @@ const userSchema = new mongoose.Schema(
     country: { type: String, required: true },
     shared_data: { type: Boolean, required: true, default: false },
     is_premium: { type: Boolean, required: true, default: false },
-    playlist_id: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'playlists',
-        required: true,
-      },
-    ],
     refreshToken: { type: String },
   },
   { collection: 'users' }

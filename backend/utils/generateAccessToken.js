@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
 
 export default function generateAccessToken(user) {
   return jwt.sign(
@@ -11,6 +11,6 @@ export default function generateAccessToken(user) {
       },
     },
     process.env.ACCESS_TOKEN_SECRET,
-    { expiresIn: '1h' }
+    { expiresIn: '5m' }
   );
 }

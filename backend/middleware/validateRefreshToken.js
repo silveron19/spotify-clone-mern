@@ -2,10 +2,9 @@ import validateToken from '../utils/validateToken.js';
 
 const validateRefreshToken = async (req, res, next) => {
   try {
-    req.user = await validateToken(
-      req.body['refreshToken'],
-      process.env.REFRESH_TOKEN_SECRET
-    );
+    const authHeader = req.headers.authorization;
+    const token = authHeader.split(' ')[1];
+    req.user = await validateToken(token, process.env.REFRESH_TOKEN_SECRET);
     next();
   } catch (error) {
     res.status(401).json({ error: error.message || 'Invalid refresh token' });

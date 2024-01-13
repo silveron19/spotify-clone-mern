@@ -10,6 +10,7 @@ export default function generateRefreshToken(user) {
         shared_data: user.shared_data,
       },
     },
-    process.env.REFRESH_TOKEN_SECRET
+    process.env.REFRESH_TOKEN_SECRET,
+    { expiresIn: '1d' }
   );
 }

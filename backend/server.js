@@ -4,8 +4,6 @@ import connectDB from './config/db.js';
 import errorHandler from './middleware/errorHandler.js';
 import playlistRoutes from './api/playlist/Routes.js';
 import userRoutes from './api/user/Routes.js';
-import validateRefreshToken from './middleware/validateRefreshToken.js';
-import generateAccessToken from './utils/generateAccessToken.js';
 
 dotenv.config();
 

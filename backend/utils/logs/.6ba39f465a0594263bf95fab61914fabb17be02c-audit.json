@@ -6,19 +6,19 @@
     "auditLog": "D:\\Project\\Self Project\\spotify-clone-mern\\backend\\utils\\logs\\.6ba39f465a0594263bf95fab61914fabb17be02c-audit.json",
     "files": [
         {
-            "date": 1704965253044,
-            "name": "D:\\Project\\Self Project\\spotify-clone-mern\\backend\\utils\\logs\\2024-01-11-app.log",
-            "hash": "b4539b2b8622bd1ec74763eb68e40e82a23f1ded5bf9eec474c2c3b1eaa4996e"
-        },
-        {
-            "date": 1705032848631,
-            "name": "D:\\Project\\Self Project\\spotify-clone-mern\\backend\\utils\\logs\\2024-01-12-app.log",
-            "hash": "5b2c444b559e281f4248c2b163514e273a997a0e755da9d305674003b7892274"
-        },
-        {
             "date": 1705147247071,
             "name": "D:\\Project\\Self Project\\spotify-clone-mern\\backend\\utils\\logs\\2024-01-13-app.log",
             "hash": "c9b064f9d2b0006ca9645f6a22b55be3bc562f3c822c903094b3f12e5937819b"
+        },
+        {
+            "date": 1705222434783,
+            "name": "D:\\Project\\Self Project\\spotify-clone-mern\\backend\\utils\\logs\\2024-01-14-app.log",
+            "hash": "36df8a8813f652c330778be6898ee7d4990d1f8f5b5d1cafc3ea6ff25f93c990"
+        },
+        {
+            "date": 1705320150154,
+            "name": "D:\\Project\\Self Project\\spotify-clone-mern\\backend\\utils\\logs\\2024-01-15-app.log",
+            "hash": "b8454cbdbaaeeede4a611337c25db5af62c8555123d94aae81da459fa9c36f94"
         }
     ],
     "hashType": "sha256"

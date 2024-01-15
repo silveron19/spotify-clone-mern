@@ -7,7 +7,7 @@ export default function generateAccessToken(user) {
         _id: user._id,
         username: user.username,
         email: user.email,
-        shared_data: user.shared_data,
+        role: user.role,
       },
     },
     process.env.ACCESS_TOKEN_SECRET,

@@ -11,6 +11,6 @@ export default function generateRefreshToken(user) {
       },
     },
     process.env.REFRESH_TOKEN_SECRET,
-    { expiresIn: '1d' }
+    { expiresIn: process.env.JWT_REFRESH_EXPIRE }
   );
 }

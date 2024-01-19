@@ -11,6 +11,6 @@ export default function generateAccessToken(user) {
       },
     },
     process.env.ACCESS_TOKEN_SECRET,
-    { expiresIn: '5m' }
+    { expiresIn: process.env.JWT_ACCESS_EXPIRE }
   );
 }

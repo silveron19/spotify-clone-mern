@@ -2,6 +2,7 @@ import {
   getUserByCredential,
   getUserByEmail,
   patchRefreshToken,
+  patchUserRole,
 } from '../../services/user.js';
 import generateAccessToken from '../../utils/generateAccessToken.js';
 import generateRefreshToken from '../../utils/generateRefreshToken.js';
@@ -94,10 +95,29 @@ const updateTokenUserHandler = tryCatch(async (req, res) => {
       .status(200)
       .json({ success: true, accessToken, refreshToken, data: result });
   } else {
-    const err = new Error('Refresh Token is expired!');
-    err.statusCode = 403;
+    const err = new Error('User not found!');
+    err.statusCode = 404;
     throw err;
   }
 });
 
-export { loginUserHandler, registerUserHandler, updateTokenUserHandler };
+const changeUserRoleHandler = tryCatch(async (req, res) => {
+  const { email, role } = req.body;
+
+  const result = await patchUserRole(email, role);
+  if (result.length === 0) {
+    const err = new Error('User not found!');
+    err.statusCode = 404;
+    throw err;
+  }
+  res
+    .status(200)
+    .json({ success: true, message: 'Role update successful', data: result });
+});
+
+export {
+  loginUserHandler,
+  registerUserHandler,
+  updateTokenUserHandler,
+  changeUserRoleHandler,
+};

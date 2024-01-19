@@ -30,4 +30,19 @@ async function patchRefreshToken(user, token) {
   return result;
 }
 
-export { getUserByCredential, patchRefreshToken, getUserByEmail };
+async function patchUserRole(email, role) {
+  const result = await users.findOneAndUpdate(
+    { email },
+    { role },
+    { new: true }
+  );
+
+  return result;
+}
+
+export {
+  getUserByCredential,
+  patchRefreshToken,
+  getUserByEmail,
+  patchUserRole,
+};

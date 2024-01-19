@@ -1,6 +1,7 @@
 :root {
-  --green20: #1ed760;
+  --green20: #23cf5f;
   --black20: #181818;
+  --black40: #333333;
   --grey20: #a7a7a7;
 }
 
@@ -13,7 +14,38 @@
   text-decoration: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body {
   background-color: black;
   color: var(--grey20);
+  display: flex;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  top: 0;
+  right: 0;
+  z-index: 9999;
 }

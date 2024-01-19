@@ -1,0 +1,47 @@
+.playlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.playlist-detail {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.playlist:hover {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.playlist-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.folder-container,
+.liked-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.25rem;
+  border-radius: 10px;
+}
+
+.folder-container {
+  background-color: #333333;
+}
+
+.liked-container {
+  color: white;
+  background: linear-gradient(to bottom right, #0e5627, #6ace8d, #ffffff);
+}
+
+.extend-icon {
+  margin-right: 0.5rem;
+}
+

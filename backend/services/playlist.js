@@ -17,4 +17,10 @@ async function getPlaylists() {
   return result;
 }
 
-export default getPlaylists;
+async function deletePlaylists(_id) {
+  const result = await playlists.deleteOne({ _id });
+
+  return result;
+}
+
+export { getPlaylists, deletePlaylists };

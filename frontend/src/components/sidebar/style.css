@@ -1,0 +1,92 @@
+.sidebar {
+  display: flex;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.sidebar a:active,
+.sidebar a:hover,
+.add-playlist:hover,
+.show-more:hover,
+.search:hover,
+.recents-menu:hover,
+.library:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar a,
+.sidebar-other .options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar a,
+.sidebar-other .options .library p {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.sidebar-other .options {
+  justify-content: space-between;
+}
+
+.library {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sidebar-content,
+.sidebar-other .options {
+  width: 100%;
+  color: var(--grey20);
+}
+
+.sidebar-content,
+.sidebar-other {
+  background-color: var(--black20);
+  border-radius: 10px;
+}
+
+.sidebar-content:not(:nth-child(3)) {
+  margin-bottom: 0.5rem;
+}
+
+.add-playlist,
+.show-more,
+.search-icon,
+.home-icon,
+.song-icon {
+  font-size: 1.5rem;
+}
+
+.add-playlist,
+.show-more,
+.sidebar-other .list-icon {
+  margin-inline: 0.5rem;
+}
+
+.recents-menu {
+  display: flex;
+}
+
+.sidebar-resize {
+  width: 3px;
+}
+
+.sidebar-resize:hover {
+  border-left: 1px solid #ccc;
+  cursor: ew-resize;
+}
+
+.sidebar-other .search,
+.sidebar-other .list-icon {
+  font-size: 1.125rem;
+  padding: 0.1rem;
+}
+
+.list-playlist {
+  padding: 0.5rem;
+}

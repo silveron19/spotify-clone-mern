@@ -1,5 +1,3 @@
-// Playlist.tsx
-
 import React, { ReactElement } from 'react';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons/faAngleRight';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,7 +15,7 @@ const Playlist: React.FC<PlaylistProps> = ({ type }): ReactElement => {
       <div className="playlist-detail">
         {type === 'liked' ? (
           <div className="liked-container">
-            <FontAwesomeIcon className="folder" icon={faHeart} />
+            <FontAwesomeIcon className="folder" icon={faHeart}/>
           </div>
         ) : (
           <div className="folder-container">

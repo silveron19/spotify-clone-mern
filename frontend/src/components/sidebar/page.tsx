@@ -6,21 +6,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowRight,
   faHome,
-  faList,
   faPlus,
   faRecordVinyl,
   faSearch,
+  faList,
 } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { useState } from 'react';
 import Playlist from '../playlist/page';
 
 const Sidebar: NextComponentType = () => {
-  const [navWidth, setNavWidth] = useState<number>(20);
+  const [navWidth, setNavWidth] = useState<number>(15);
 
   return (
     <nav className="sidebar">
-      <div className="sidebar-container" style={{ minWidth: `${navWidth}rem` }}>
+      <div className="sidebar-container" style={{ minWidth: `${navWidth}vw` }}>
         <Link href="/home" className="sidebar-content">
           <FontAwesomeIcon className="home-icon" icon={faHome} />
           <p>Home</p>
@@ -35,7 +35,7 @@ const Sidebar: NextComponentType = () => {
               <FontAwesomeIcon className="song-icon" icon={faRecordVinyl} />
               <p>Your Library</p>
             </div>
-            <div className="more-option">
+            <div className="more-options">
               <FontAwesomeIcon className="add-playlist" icon={faPlus} />
               <FontAwesomeIcon className="show-more" icon={faArrowRight} />
             </div>
@@ -49,6 +49,11 @@ const Sidebar: NextComponentType = () => {
           </div>
           <div className="list-playlist">
             <Playlist type="liked" />
+            <Playlist type="folder" />
+            <Playlist type="folder" />
+            <Playlist type="folder" />
+            <Playlist type="folder" />
+            <Playlist type="folder" />
             <Playlist type="folder" />
             <Playlist type="folder" />
             <Playlist type="folder" />

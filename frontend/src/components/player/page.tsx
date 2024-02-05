@@ -6,29 +6,26 @@ import {
   faPauseCircle,
   faStepBackward,
   faStepForward,
-  faVolumeUp,
+  faVolumeHigh,
 } from '@fortawesome/free-solid-svg-icons';
+import Tracker from '../tracker/page';
 
 function Player() {
   return (
-    <div className="player">
-      <div className="player-container">
+    <div className="player-container">
+      <div className="player-center">
         <div className="player-options">
           <FontAwesomeIcon className="step-icon" icon={faStepBackward} />
           <FontAwesomeIcon className="player-icon" icon={faPauseCircle} />
           <FontAwesomeIcon className="step-icon" icon={faStepForward} />
         </div>
-        <div className="tracker">
-          <p>--;-</p>
-          <div className="tracker-bar"></div>
-          <p>--;-</p>
-        </div>
-        <div className="player-other-options">
-          <FontAwesomeIcon icon={faLayerGroup} />
-          <FontAwesomeIcon icon={faHeadset} />
-          <FontAwesomeIcon icon={faVolumeUp} />
-          <div className="tracker-bar"></div>
-        </div>
+        <Tracker type="time" />
+      </div>
+      <div className="player-right">
+        <FontAwesomeIcon icon={faLayerGroup} />
+        <FontAwesomeIcon icon={faHeadset} />
+        <FontAwesomeIcon icon={faVolumeHigh} />
+        <Tracker type="volume" />
       </div>
     </div>
   );

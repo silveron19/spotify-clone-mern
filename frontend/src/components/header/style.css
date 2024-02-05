@@ -1,0 +1,61 @@
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: 600;
+  background-color: burlywood;
+  position: sticky;
+}
+
+.navigation-action,
+.nav-other,
+.acc-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-action {
+  font-size: 1.5rem;
+}
+
+.left-angle-icon:hover,
+.right-angle-icon:hover {
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.left-angle-icon {
+  margin-right: 1.5rem;
+}
+
+.nav-other {
+  gap: 1rem;
+}
+
+.premium-btn {
+  background-color: var(--green20);
+  color: black;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.premium-btn:hover {
+  background-color: rgba(35, 207, 95, 0.8);
+}
+
+.acc-logo {
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: black;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.download-btn {
+  background-color: black;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: whitesmoke;
+}

@@ -12,15 +12,13 @@ import {
   faList,
 } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-import { useState } from 'react';
 import Playlist from '../playlist/page';
+import { playlistType } from '@/types/playlistTypes';
 
 const Sidebar: NextComponentType = () => {
-  const [navWidth, setNavWidth] = useState<number>(15);
-
   return (
-    <nav className="sidebar">
-      <div className="sidebar-container" style={{ minWidth: `${navWidth}vw` }}>
+    <div className="sidebar">
+      <div className="sidebar-container">
         <Link href="/home" className="sidebar-content">
           <FontAwesomeIcon className="home-icon" icon={faHome} />
           <p>Home</p>
@@ -36,8 +34,11 @@ const Sidebar: NextComponentType = () => {
               <p>Your Library</p>
             </div>
             <div className="more-options">
-              <FontAwesomeIcon className="add-playlist" icon={faPlus} />
-              <FontAwesomeIcon className="show-more" icon={faArrowRight} />
+              <FontAwesomeIcon className="add-icon" icon={faPlus} />
+              <FontAwesomeIcon
+                className="arrow-right-icon"
+                icon={faArrowRight}
+              />
             </div>
           </div>
           <div className="options">
@@ -48,23 +49,22 @@ const Sidebar: NextComponentType = () => {
             </div>
           </div>
           <div className="list-playlist">
-            <Playlist type="liked" />
-            <Playlist type="folder" />
-            <Playlist type="folder" />
-            <Playlist type="folder" />
-            <Playlist type="folder" />
-            <Playlist type="folder" />
-            <Playlist type="folder" />
-            <Playlist type="folder" />
-            <Playlist type="folder" />
-            <Playlist type="folder" />
+            <Playlist type={playlistType.LIKED} />
+            <Playlist type={playlistType.PLAYLIST} />
+            <Playlist type={playlistType.FOLDER} />
+            <Playlist type={playlistType.FOLDER} />
+            <Playlist type={playlistType.FOLDER} />
+            <Playlist type={playlistType.FOLDER} />
+            <Playlist type={playlistType.FOLDER} />
+            <Playlist type={playlistType.FOLDER} />
           </div>
         </div>
       </div>
-      <div className="sidebar-resize"></div>
-    </nav>
+    </div>
   );
 };
+
+
 
 Sidebar.getInitialProps = async () => {
   // Mengambil data atau melakukan operasi lain di sini

@@ -1,34 +1,33 @@
 import React, { ReactElement } from 'react';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons/faAngleRight';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFolder } from '@fortawesome/free-regular-svg-icons';
 import './style.css';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import PlaylistContent from './content/playlist';
+import FolderContent from './content/folder';
+import LikedContent from './content/liked';
+import { playlistType } from '@/types/playlistTypes';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 interface PlaylistProps {
-  type?: string;
+  type?: playlistType;
 }
 
 const Playlist: React.FC<PlaylistProps> = ({ type }): ReactElement => {
+  let content;
+  if (type === playlistType.LIKED) {
+    content = <LikedContent />;
+  } else if (type === playlistType.FOLDER) {
+    content = <FolderContent />;
+  } else if (type === playlistType.PLAYLIST) {
+    content = <PlaylistContent />;
+  } else {
+    throw new Error(`Invalid type prop: ${type}`);
+  }
+
   return (
     <div className="playlist">
-      <div className="playlist-detail">
-        {type === 'liked' ? (
-          <div className="liked-container">
-            <FontAwesomeIcon className="folder" icon={faHeart}/>
-          </div>
-        ) : (
-          <div className="folder-container">
-            <FontAwesomeIcon className="folder" icon={faFolder} />
-          </div>
-        )}
-
-        <div>
-          <p className="playlist-title">New Folder</p>
-          <p>0 playlists</p>
-        </div>
-      </div>
-      <FontAwesomeIcon className="extend-icon" icon={faAngleRight} />
+      <div className="playlist-detail">{content}</div>
+      <FontAwesomeIcon className="caret-right" icon={faCaretRight} />
     </div>
   );
 };

@@ -17,7 +17,6 @@
 body {
   background-color: black;
   color: var(--grey20);
-  overflow: hidden;
 }
 
 html {
@@ -25,28 +24,29 @@ html {
 }
 
 section {
-  flex: 1;
-  background-color: var(--black40);
+  background-color: var(--black20);
   border-radius: 10px;
+  grid-column: 2 / 4;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  overflow: auto;
+  position: relative;
 }
 
 .app-container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 25% 2fr 1fr;
+  grid-template-rows: 85% 15%;
+  height: 100vh;
+  column-gap: 0.5rem;
 }
 
-.main-content {
-  display: flex;
-  margin: 0.5rem;
+a {
+  color: var(--grey20);
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0.8);
-  top: 0;
-  right: 0;
-  z-index: 9999;
+a:active,
+a:hover {
+  color: whitesmoke;
+  cursor: pointer;
 }

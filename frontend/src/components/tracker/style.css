@@ -1,0 +1,26 @@
+.tracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.current-time {
+  margin-right: 0.5rem;
+}
+
+.duration {
+  margin-left: 0.5rem;
+}
+
+.tracker-bar {
+  height: 4px;
+  background-color: whitesmoke;
+}
+
+.ball {
+  min-height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 100px;
+  background-color: whitesmoke;
+}

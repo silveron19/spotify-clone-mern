@@ -1,17 +1,33 @@
-
-
 .sidebar {
-  display: flex;
+  grid-column: 1;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.sidebar a:active,
-.sidebar a:hover,
-.add-playlist:hover,
-.show-more:hover,
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-other {
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar-content,
+.sidebar-other {
+  border-radius: 10px;
+  background-color: var(--black20);
+}
+
+list-play.list-playlist:hover,
+.add-icon:hover,
+.arrow-right-icon:hover,
 .search:hover,
 .recents-menu:hover,
 .library:hover {
-  color: white;
+  color: whitesmoke;
   cursor: pointer;
 }
 
@@ -39,23 +55,12 @@
   gap: 1rem;
 }
 
-.sidebar-content,
-.sidebar-other .options {
-  color: var(--grey20);
-}
-
-.sidebar-content,
-.sidebar-other {
-  background-color: var(--black20);
-  border-radius: 10px;
-}
-
 .sidebar-content {
   margin-bottom: 0.5rem;
 }
 
-.add-playlist,
-.show-more,
+.add-icon,
+.arrow-right-icon,
 .search-icon,
 .home-icon,
 .song-icon {
@@ -89,7 +94,7 @@
 
 .list-playlist {
   overflow-y: hidden;
-  height: 45vh;
+  height: calc(100% - 8.5rem);
   scrollbar-gutter: stable;
 }
 

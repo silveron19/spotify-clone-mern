@@ -1,0 +1,15 @@
+.page-container {
+  padding: 1rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(175px, 100%), 1fr));
+  padding: 1rem 0 2rem;
+  gap: 1rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}

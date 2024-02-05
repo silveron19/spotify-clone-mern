@@ -20,7 +20,8 @@
 .playlist-title {
   font-size: 1rem;
   font-weight: 700;
-  color: white;
+  color: whitesmoke;
+  margin-bottom: 0.2rem;
 }
 
 .folder-container,
@@ -39,6 +40,15 @@
 }
 
 .liked-container {
-  color: white;
+  color: whitesmoke;
   background: linear-gradient(to bottom right, #0e5627, #6ace8d, #ffffff);
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 100px;
+  background-color: var(--grey20);
+  display: inline-block;
+  vertical-align: middle;
 }

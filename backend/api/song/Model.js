@@ -8,6 +8,11 @@ const songSchema = new mongoose.Schema(
     duration: { type: String, required: true },
     pict: { type: String, required: true },
     count: { type: Number, required: true },
+    album_id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'albums',
+      required: true,
+    },
   },
   { collection: 'songs' }
 );

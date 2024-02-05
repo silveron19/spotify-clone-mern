@@ -1,4 +1,4 @@
-import Header from '@/components/header/page';
+import Header from '@/components/header';
 import React from 'react';
 
 export default function DashboardLayout({

@@ -8,7 +8,7 @@ import {
   faStepForward,
   faVolumeHigh,
 } from '@fortawesome/free-solid-svg-icons';
-import Tracker from '../tracker/page';
+import Tracker from '../tracker';
 
 function Player() {
   return (

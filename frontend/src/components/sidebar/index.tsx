@@ -12,7 +12,7 @@ import {
   faList,
 } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-import Playlist from '../playlist/page';
+import Playlist from '../playlist';
 import { playlistType } from '@/types/playlistTypes';
 
 const Sidebar: NextComponentType = () => {
